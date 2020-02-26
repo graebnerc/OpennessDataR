@@ -1,0 +1,24 @@
+Package: OpennessDataR
+Title: Collects and automatically updates data on economic openness
+Version: 0.0.9000
+Authors@R: person("Claudius", "Graebner", 
+  email = "claudius@claudius-graebner.com",
+  role = c("aut", "cre"))
+Description: Collects and automatically updates data on economic openness. It
+  accompanies the paper 'Understanding economic openness: A review of existing 
+  measures' by Claudius Graebner, Philipp Heimberger, Jakob Kapeller and 
+  Florian Springholz.
+Depends: R (>= 3.1.0)
+License: MIT
+LazyData: true
+Imports: 
+    data.table (>= 1.12.6),
+    WDI (>= 2.6.0),
+    countrycode (>= 1.1.0),
+    haven (>= 2.2.0),
+    tidyr (>= 1.0.0),
+    zoo (>= 1.8.6)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

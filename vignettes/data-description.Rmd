@@ -1,0 +1,61 @@
+---
+title: "data-description"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{data-description}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+# library(OpennessDataR)
+```
+
+# Information about the data set
+
+## Meta data
+
+| Variable         | Description                                  | Unit                          | Source           |
+| -----------------|:--------------------------------------------:| :----------------------------:|:----------------:|
+| iso3c                   | The iso3 country code                                                                                       | iso3c    | [Info][1] |
+| year                    | The year of observation                                                                                     |   NA     |  |
+| gdp_real_ppp            | GDP, PPP (constant 2011 int $)                                                                              | constant 2011 int $ | [World Bank][13]
+| gdp_real_pc_ppp         | GDP, PPP per capita (constant 2011 int $)                                                                   | constant 2011 int $ per capita | [World Bank][14]
+| trade_total_GDP | Trade is the sum of exports and imports of goods and services measured as a share of gross domestic product | % of GDP | [World Bank][36] |  
+| trade_exp_GDP | Exports of goods and services | % of GDP |  [World Bank][37] | 
+| trade_imp_GDP | Imports of goods and services | % of GDP |  [World Bank][38] | 
+| kof_G | KOF Globalisation Index | Index | [KOF Institute][45] |
+| kof_G_df | KOF Globalisation Index, de facto | Index | [KOF Institute][45] |
+| kof_G_dj | KOF Globalisation Index, de jure | Index | [KOF Institute][45] |
+| kof_EcG | KOF Economic Globalisation Index | Index | [KOF Institute][45] |
+| kof_EcG_df | KOF Economic Globalisation Index, de facto | Index | [KOF Institute][45] |
+| kof_EcG_dj | KOF Economic Globalisation Index, de jure | Index | [KOF Institute][45] |
+| kof_trade | KOF Trade Globalisation Index | Index | [KOF Institute][45] |
+| kof_trade_df | KOF Trade Globalisation Index, de facto | Index | [KOF Institute][45] |
+| kof_trade_dj | KOF Trade Globalisation Index, de jure | Index | [KOF Institute][45] |
+| kof_fin | KOF Financial Globalisation Index | Index | [KOF Institute][45] |
+| kof_fin_df | KOF Financial Globalisation Index, de facto | Index | [KOF Institute][45] |
+| kof_fin_dj | KOF Financial Globalisation Index, de jure | Index | [KOF Institute][45] |
+| chinn_ito | Measure for a country's degree of capital account openness.  | Index | [Chinn and Ito][46] |
+| chinn_ito_normed | `chinn_ito` normalized bwetween 0 and 1 | Index | [Chinn and Ito][46] |
+| lmf_port_eq_asst_stock| Portfolio equity assets (stock) | Current US dollars, millions | [LMF database][47] |
+| lmf_port_eq_liab_stock | Portfolio equity liabilities (stock) | Current US dollars, millions | [LMF database][47] |
+| lmf_port_dbt_asst | Portfolio debt assets | Current US dollars, millions | [LMF database][47] |
+| lmf_port_dbt_liab | Portfolio debt liabilities | Current US dollars, millions | [LMF database][47] |
+| lmf_fdi_asst_stock | FDI assets (stock) | Current US dollars, millions | [LMF database][47] |
+| lmf_fdi_asst_other | FDI assets (other) | Current US dollars, millions | [LMF database][47] |
+| lmf_fdi_liab_stock | FDI liabilities (stock) | Current US dollars, millions | [LMF database][47] |
+| lmf_fdi_liab_other | FDI liabilities (other) | Current US dollars, millions | [LMF database][47] |
+| lmf_debt_asst_stock | Debt assets (stock): sum of "portfolio debt securities" and "other investment" (but not FDI intercompany debt, which is in the FDI statistics). | Current US dollars, millions | [LMF database][47] | 
+| lmf_debt_liab_stock | Debt liabilities (stock): sum of "portfolio debt securities" and "other investment" (but not FDI intercompany debt, which is in the FDI statistics). | Current US dollars, millions | [LMF database][47] |
+| lmf_nfa | Alternative FDI or equity valuation: includes net foreign assets using FDI or equity assets and liabilities estimated using different methodologies. | Current US dollars, millions | [LMF database][47] |
+| lmf_nfa_gdp | NFA/GDP | % of GDP (current USD) | [LMF database][47] |
+
+[1]: https://unstats.un.org/unsd/tradekb/knowledgebase/country-code
