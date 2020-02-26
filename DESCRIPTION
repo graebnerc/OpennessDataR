@@ -1,6 +1,6 @@
 Package: OpennessDataR
 Title: Collects and automatically updates data on economic openness
-Version: 0.0.9000
+Version: 0.0.9001
 Authors@R: person("Claudius", "Graebner", 
   email = "claudius@claudius-graebner.com",
   role = c("aut", "cre"))
