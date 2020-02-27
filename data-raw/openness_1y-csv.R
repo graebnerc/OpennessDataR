@@ -4,19 +4,19 @@ download_wb <- FALSE
 download_lmf <- FALSE
 download_chinn_ito <- FALSE
 download_tariff_res <- FALSE
-source("R/setup_countrylist.R") # defines countries_used
+source("data-raw/setup_countrylist.R") # defines countries_used
 source("R/helper_functions.R")
-source("R/setup_PWT.R")
-source("R/setup_KOF.R")
-source("R/setup_WDI.R")
-source("R/setup_LMF.R")
-source("R/setup_UNCTAD.R")
-source("R/setup_ChinnIto.R")
-source("R/setup_Tariff_RES.R")
-source("R/setup_INDICATORS.R")
-source("R/setup_FTI.R")
-source("R/setup_WITS.R")
-source("R/setup_HF.R")
+source("data-raw/setup_PWT.R")
+source("data-raw/setup_KOF.R")
+source("data-raw/setup_WDI.R")
+source("data-raw/setup_LMF.R")
+source("data-raw/setup_UNCTAD.R")
+source("data-raw/setup_ChinnIto.R")
+source("data-raw/setup_Tariff_RES.R")
+source("data-raw/setup_INDICATORS.R")
+source("data-raw/setup_FTI.R")
+source("data-raw/setup_WITS.R")
+source("data-raw/setup_HF.R")
 
 # Setup variables and merge into full_data-------------------------------------
 pwt <- setup_pwt(version_pwt = pwt_version, countries_used = countries_used)
@@ -29,6 +29,13 @@ full_data <- data.table::merge.data.table(pwt, kof, all = T,
 wdi <- setup_wdi(download_wb = download_wb)
 
 full_data <- data.table::merge.data.table(full_data, wdi, all = T,
+                                          by.x = c("country", "year"),
+                                          by.y = c("iso3c", "year"))
+source("data-raw/setup_TANG.R")
+
+tang_data <- setup_tang(countries_considered = countries_used)
+
+full_data <- data.table::merge.data.table(full_data, tang_data, all = T,
                                           by.x = c("country", "year"),
                                           by.y = c("iso3c", "year"))
 
@@ -82,31 +89,31 @@ hf_data <- setup_hf(countries_considered = countries_used)
 full_data <- data.table::merge.data.table(full_data, hf_data, all = T,
                                           by.x = c("country", "year"),
                                           by.y = c("iso3c", "year"))
-# TODO "KA_Index":
 
 # Interpolation of missings----------------------------------------------------
-library(magrittr)
-full_data <- full_data %>%
-  dplyr::group_by(country) %>%
-  dplyr::mutate(FTI_original_ipo=zoo::na.approx(FTI_original, na.rm=FALSE),
-                FTI_reduced_ipo=zoo::na.approx(FTI_reduced, na.rm=FALSE),
-                Tariff_WITS_ipo=zoo::na.approx(Tariff_WITS, na.rm=FALSE)) %>%
-  dplyr::ungroup()
+full_data <- dplyr::group_by(full_data, country)
+full_data <- dplyr::mutate(
+  full_data,
+  FTI_original_ipo=zoo::na.approx(FTI_original, na.rm=FALSE),
+  FTI_reduced_ipo=zoo::na.approx(FTI_reduced, na.rm=FALSE),
+  Tariff_WITS_ipo=zoo::na.approx(Tariff_WITS, na.rm=FALSE)
+  )
+full_data <- dplyr::ungroup(full_data)
 
 data.table::setDT(full_data)
 
 full_data <- full_data[year>1959]
 
 # Add manually collected data--------------------------------------------------
-old_data <- data.table::fread("data/final_openness_data_1y.csv")
+old_data <- data.table::fread("data-raw/final_openness_data_1y.csv")
 manual_data_names <- c(
   "ComplexityGroup",
   "LMF_open_pv", "FIN_CUR", "CAPITAL",
   "ccode", "Year")
 manual_data <- dplyr::select(old_data, dplyr::one_of(manual_data_names))
 manual_data <- dplyr::mutate(manual_data, Year=as.double(Year))
-full_data <- dplyr::left_join(full_data, manual_data, by=c("country"="ccode",
-                                                           "year"="Year"))
+full_data <- dplyr::left_join(full_data, manual_data,
+                              by=c("country"="ccode", "year"="Year"))
 
 # Make periods-----------------------------------------------------------------
 full_data$period <- cut(full_data$year, seq(1900, 2100, 5)) # set 5 year periods
@@ -150,3 +157,7 @@ openness_1y <- full_data
 
 # usethis::use_data_raw("openness_1y.csv")
 usethis::use_data(openness_1y, overwrite = T)
+
+# Call 5-year version----------------------------------------------------------
+
+source("data-raw/openness_5y-csv.R")
