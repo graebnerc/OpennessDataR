@@ -14,7 +14,7 @@ setup_hf <- function(countries_considered){
                   "Index Year"="year"),
     colClasses = c("character", rep("double", 14)))
   countries_removed <- c("Eswatini", "Kosovo", "Micronesia")
-  hf[!country %in% countries_removed, iso3c:=countrycode(
+  hf[!country %in% countries_removed, iso3c:=countrycode::countrycode(
     country, "country.name", "iso3c")]
   hf[, country:=NULL]
   hf <- hf[iso3c %in% countries_considered]

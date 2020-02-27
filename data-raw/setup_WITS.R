@@ -1,4 +1,3 @@
-source("R/setup_countrylist.R")
 # WITS-Product-MFN.csv and WITS-Product-AHS.csv come from:
 # https://wits.worldbank.org/CountryProfile/en/country/by-country/startyear/LTST/endyear/LTST/tradeFlow/Import/indicator/AHS-WGHTD-AVRG/partner/WLD/product/Total
 # https://wits.worldbank.org/CountryProfile/en/country/by-country/startyear/LTST/endyear/LTST/tradeFlow/Import/indicator/MFN-WGHTD-AVRG/partner/WLD/product/Total
