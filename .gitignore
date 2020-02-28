@@ -4,3 +4,5 @@ inst/doc
 R/R-old
 *.md#
 *~
+data-raw/Korrespondenz openness indicators.xlsx
+.Rhistory
