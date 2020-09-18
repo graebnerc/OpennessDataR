@@ -1,18 +1,25 @@
-# OpennessDataR
+# Data on economic openness
 
-This packages complements Gräbner *et al.* (2018) by providing the full openness 
+[To the data homepage](https://graebnerc.github.io/OpennessDataR/)
+
+This packages complements Gräbner *et al.* (2020) by providing the full openness 
 data set and the means to update it automatically.
 
 More information about the data summarized in the package and links to the 
-original sources can be found in the `data-description` vignette.
+original sources can be found on the
+[official data homepage](https://graebnerc.github.io/OpennessDataR/),
+where we also provide further information about the corresponding paper.
 
 ## Using the data
 
 The package gets regularly updated to make sure that the current data set
 is the most recent one. 
+We suggest visiting the [official data homepage](https://graebnerc.github.io/OpennessDataR/)
+to download the data directly.
 If you feel that an update is necessary - or you have any other query -
 please use the issue tracker of the 
-[Github page](https://github.com/graebnerc/OpennessDataR) of the package.
+[Github page](https://github.com/graebnerc/OpennessDataR) of the package
+or contact Claudius [directly](https://claudius-graebner.com/contact-1.html).
 
 The package contains two data sets: one with yearly data and one with 
 5-year averages. After installing the package you can use them via one of
@@ -55,11 +62,11 @@ released.
 If you use the package, please cite the following paper 
 (you can also use `citation("OpennessDataR")`):
 
-> Graebner, C., Heimberger, P., Kapeller, J. and F. Springholz (2018): Measuring
-  Economic Openness: A review of existing measures and empirical practices, ICAE
-  Working Paper 84. Available online:
-  [https://www.jku.at/fileadmin/gruppen/108/ICAE_Working_Papers/wp84.pdf](https://www.jku.at/fileadmin/gruppen/108/ICAE_Working_Papers/wp84.pdf)
+> Graebner, C., Heimberger, P., Kapeller, J. and F. Springholz (2020): Understanding
+ economic openness: a review of existing measures, *Review of World Economics*, 
+ forthcoming. 
+ DOI: [10.1007/s10290-020-00391-1](https://doi.org/10.1007/s10290-020-00391-1)
 
-It is also nice to cite the original sources for the following data:
-
-* TBA
+It is desirable to cite the original sources.
+Your find more information about how to do this 
+[here](https://graebnerc.github.io/OpennessDataR/).
