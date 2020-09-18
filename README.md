@@ -67,6 +67,6 @@ If you use the package, please cite the following paper
  forthcoming. 
  DOI: [10.1007/s10290-020-00391-1](https://doi.org/10.1007/s10290-020-00391-1)
 
-It is desirable to cite the original sources.
+It is also desirable to cite the original sources.
 Your find more information about how to do this 
 [here](https://graebnerc.github.io/OpennessDataR/).
