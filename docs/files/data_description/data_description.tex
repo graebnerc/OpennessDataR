@@ -1,0 +1,119 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[
+	a4paper,
+	11pt,
+	bibtotoc,
+	headings=standardclasses,
+  	headings=big]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[intlimits]{amsmath}
+\usepackage[top=20mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[ugly]{units} %Usage: $\unit[100]{m}$ or $\unitfrac[100]{m}{s}$
+\usepackage{xcolor} 
+\usepackage{booktabs,array,multirow,rotating,tabularx,longtable}  
+
+\definecolor{NiceBlue}{RGB}{0, 76, 147}
+\definecolor{NiceRed}{RGB}{255, 26, 26}
+\definecolor{NiceGreen}{RGB}{41, 163, 41}
+\definecolor{NiceYellow}{RGB}{230, 153, 0}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = {NiceBlue},
+    citecolor = {NiceBlue},
+    urlcolor = {NiceBlue}
+    }
+
+\newcommand{\code}[1]{\colorbox{gray!20}{\texttt{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} 
+
+\usepackage[autostyle]{csquotes}
+\usepackage{natbib, doipubmed}
+
+\begin{document}
+
+%\titlehead{Data description \hfill Data on economic openness}
+\title{Measuring economic openness: description of the variables}
+\author{Claudius Gräbner, Philipp Heimberger, Jakob Kapeller and Florian Springholz}
+\date{\today}
+% \publishers{The publisher}
+\maketitle
+
+Below we describe the variables contained in the data set. 
+In case you find any inconsistencies, please let us know.
+If you use the data set, please cite \citet{openness} as well as the original source.
+You find more information on the \href{https://graebnerc.github.io/webtest/}{data webpage}.
+Information about the own computation steps can also be found in \citet{openness}.
+
+\begin{longtable}{cL{5cm}L{2cm}L{2.75cm}}
+\toprule
+	\textbf{Variable} & \textbf{Description} & \textbf{Unit} & \textbf{Source}\\
+\midrule[0.75pt]
+\endhead
+\code{Alcala} & Real trade share & \% of GDP at PPP & \citet{Alcala.2004} \\
+\code{CAPITAL} & Text-based index for de jure financial openness. & Index (0-100) & \citet{Quinn.2008fb4}\\
+\code{chinn\_ito\_normed} & Chinn-Ito-Index, a table-based AREAER measure (normed to 0-1 range). & Index (0-1)& \citet{Chinn.2008}\\
+\code{ComplexityGroup} & Country classification according to the ECI index \citep[][see the paper for details]{Hidalgo.2009}. & NA & \citet{openness} \\
+\code{CTS} & Composite Trade Share. & Index & \citet{Squalli.2011}\\
+\code{EXP\_to\_GDP} & Exports to GDP & \% of GDP & \href{https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS}{World Bank}\\
+\code{Exports\_USD\_constant} & Total exports & Constant USD & \href{https://data.worldbank.org/indicator/NE.EXP.GNFS.KD}{World Bank} \\
+\code{Exports\_USD\_current} & Total exports & Current USD & \href{https://data.worldbank.org/indicator/NE.EXP.GNFS.CD}{World Bank}\\
+%
+\code{FIN\_CUR} & The Financial Current Account, a text-based AREAR measure. & Index (0-100) & \citet{Quinn.2008fb4} \\
+\code{FTI\_original} & Freedom to trade international index, sub-index of the Economic Freedom Index. & Index & \href{https://www.fraserinstitute.org/economic-freedom/dataset}{Fraser Institute}\\\code{FTI\_original\_ipo} & Interpolated version of \code{FTI\_original}. & Index & Own computation\\
+\code{FTI\_panel} & The FTI index optimized for panel use. & Index & \href{https://www.fraserinstitute.org/economic-freedom/dataset}{Fraser Institute} \\
+\code{FTI\_reduced} & \code{FTI\_original} without considering black market exchange rates and capital and people controls. & Index. & Own computation \\
+\code{FTI\_reduced\_ipo} & Interpolated version of \code{FTI\_reduced} & Index. & Own computation \\
+%GDP_pc_growth  % raus
+%hc % raus
+\code{HF\_econ} & Economic freedom according to the \textit{Index of Economic Freedom} & Index & \href{https://www.heritage.org/index/explore}{Heritage Foundation}\\
+\code{HF\_fin} & Investment freedom according to the \textit{Index of Economic Freedom}  & Index & \href{https://www.heritage.org/index/explore}{Heritage Foundation} \\
+\code{HF\_trade} & Trade freedom according to the \textit{Index of Economic Freedom} & Index & \href{https://www.heritage.org/index/explore}{Heritage Foundation} \\
+%
+\code{IMP\_to\_GDP} & Imports to GDP. & \% of GDP & \href{https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS}{World Bank}\\
+\code{Imports\_USD\_constant } & Total imports & Constant USD & \href{https://data.worldbank.org/indicator/NE.IMP.GNFS.KD}{World Bank}\\\code{Imports\_USD\_current} & Total imports & Current USD & \href{https://data.worldbank.org/indicator/NE.IMP.GNFS.CD}{World Bank}\\
+\code{IncomeGroup} & Income classification of the World Bank. & NA & \href{https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups}{World Bank}\\
+\code{inflation} & Inflation & Index & \href{https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG}{World Bank}\\
+\code{inv\_share} & & & \\
+%
+\code{KAOPEN}  & Chinn-Ito-Index, a table-based AREAER measure. & Index (0-1)& \citet{Chinn.2008}\\
+%
+\code{KOF\_defacto} & De facto component of the KOF Economic Globalization Index (\code{KOFEcGIdf}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_dejure} & De jure component of the KOF Economic Globalization Index (\code{KOFEcGIdj}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_econ} & KOF Economic Globalization Index (\code{KOFEcGI}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_finance} & KOF Financial Globalization Index (\code{KOFFiGI}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\\code{KOF\_finance\_df} & & & \\
+\code{KOF\_finance\_df} & De facto component of the KOF Financial Globalization Index (\code{KOFFiGIdf}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_finance\_dj} & De jure component of the KOF Financial Globalization Index (\code{KOFFiGIdj}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_trade} & KOF Trade Globalization Index (\code{KOFTrGI}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_trade\_df} & De facto component of the KOF Trade Globalization Index (\code{KOFTrGIdf}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+\code{KOF\_trade\_dj} & De jure component of the KOF Trade Globalization Index (\code{KOFTrGIdj}) & Index & \href{https://kof.ethz.ch/en/forecasts-and-indicators/indicators/kof-globalisation-index.html}{KOF Institute}, \citet{Gygli.2019}\\
+%
+\code{Lietal} & Adjusted trade share, modification of \citet{Frankel} suggested by \citet{Li.2004}. & \% of GDP (adjusted) & World Bank, own computation \\
+\code{LMF\_EQ} & Total foreign assets and liabilities (stocks). & \% GDP & \citet{Lane.2017}\\
+\code{LMF\_FDI\_total\_stocks\_GDP} & Sum of inward and outwarf FDI stocks. & \% GDP & \citet{Lane.2017} \\
+\code{LMF\_open} & Portfolio equity assets and liabilities (stocks). & \% GDP & \citet{Lane.2017}\\
+\code{LMF\_open\_pv} & Private Financial Openness Index: subtracting official development aid (DA) from foreign liablities (FL) and international reserves (IR) from foreign assets (FA). & \% GDP & \citet{Lane.2017}\\
+%
+\code{Penn\_GDP\_PPP} & Per capita GDP in PPP (\code{rgdpo} / [\code{population}$\cdot 1000]$) & PPP per person & \citet{Feenstra.2015}\\
+\code{period} & Helper to compute 5-year averages. & & \\\code{pop\_growth} & Growth of \code{population} & Growth & Own computation \\
+\code{pop\_log} & Log of \code{population} & Log & Own computation \\
+\code{population} & Total population. & 1000 people & \href{https://data.worldbank.org/indicator/SP.POP.TOTL}{World Bank}\\
+\code{rgdpo} & Output-side real GDP. & Chained PPPs (in mil. 2011 USD) & \citet{Feenstra.2015} \\
+\code{Tariff\_RES} & 100 minus the tariff rate, which is based upon the average of (1) the effective (i.e. tariff revenue divided by import value) and (2) the unweighted tariff rates. & Index (0-100) & \citet{Jaumotte.2013}\\
+\code{Tariff\_WITS} & 100 – Mean of Effectively Applied (AHS) and Most-Favored Nation (MFN) weighted average tariff rates. & Index (0-100) & \citet{openness}\\
+\code{Tariff\_WITS\_ipo} & Interpolation of \code{Tariff\_WITS}. & Index (0-100) & \citet{openness}\\
+\code{Trade\_to\_GDP} & Total imports and exports & \% GDP & \href{https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS}{World Bank}\\
+\code{UNC\_FDI\_in\_stock\_GDP} & Stock of inward FDI. & \% of GDP & \href{https://unctadstat.unctad.org/EN/}{UNCTAD}\\
+\code{UNC\_FDI\_out\_stock\_GDP} & Stock of outward FDI. & \% of GDP & \href{https://unctadstat.unctad.org/EN/}{UNCTAD}\\
+\code{UNC\_FDI\_total\_stocks\_GDP} & Stock of total FDI. & \% of GDP & \href{https://unctadstat.unctad.org/EN/}{UNCTAD}\\
+\bottomrule
+\end{longtable}
+
+\bibliographystyle{authoryeardoi}
+\bibliography{references.bib}
+\end{document}

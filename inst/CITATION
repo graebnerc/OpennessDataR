@@ -1,14 +1,13 @@
-citHeader("To cite OpennessDataR in publications please cite the following paper:")
+citHeader("In case you use OpennessDataR infor publications please cite the following paper:")
 
 citEntry(
   entry    = "Article",
-  title    = "Measuring Economic Openness: A review of existing measures and empirical practices",
+  title    = "Understanding economic openness: a review of existing measures",
   author   = "Claudius Graebner and Philipp Heimberger and Jakob Kapeller and Florian Springholz",
-  journal = "ICAE Working Paper",
-  year = "2018",
-  volume = "84",
-  url = "https://www.jku.at/fileadmin/gruppen/108/ICAE_Working_Papers/wp84.pdf",
+  journal = "Review of World Economics",
+  year = "2020",
+  url = "https://doi.org/10.1007/s10290-020-00391-1",
   textVersion = paste(
-  "Graebner, C., Heimberger, P., Kapeller, J. and F. Springholz (2018): Measuring Economic Openness: A review of existing measures and empirical practices, ICAE Working Paper 84. Available online: https://www.jku.at/fileadmin/gruppen/108/ICAE_Working_Papers/wp84.pdf"
+  "Graebner, C., Heimberger, P., Kapeller, J. and F. Springholz (2020): nderstanding economic openness: a review of existing measures, Review of World Economics. DOI: 10.1007/s10290-020-00391-1"
   )
 )

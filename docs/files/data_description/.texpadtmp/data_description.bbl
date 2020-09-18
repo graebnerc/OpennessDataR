@@ -1,0 +1,86 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Alcala \& Ciccone(2004)}]{Alcala.2004}
+Alcala, F. \& Ciccone, A. (2004).
+\newblock {Trade and Productivity}.
+\newblock \emph{The Quarterly Journal of Economics}, 119(2), 613--646.
+\newblock \doi{10.1162/0033553041382139}.
+
+\bibitem[{Chinn \& Ito(2008)}]{Chinn.2008}
+Chinn, M.~D. \& Ito, H. (2008).
+\newblock {A New Measure of Financial Openness}.
+\newblock \emph{Journal of Comparative Policy Analysis: Research and Practice},
+  10(3), 309--322.
+\newblock \doi{10.1080/13876980802231123}.
+
+\bibitem[{Feenstra \emph{et~al.}(2015)Feenstra, Inklaar, \&
+  Timmer}]{Feenstra.2015}
+Feenstra, R.~C., Inklaar, R., \& Timmer, M.~P. (2015).
+\newblock {The Next Generation of the Penn World Table}.
+\newblock \emph{American Economic Review}, 105(10), 3150--3182.
+\newblock \doi{10.1257/aer.20130954}.
+
+\bibitem[{Frankel(2000)}]{Frankel}
+Frankel, J.~A. (2000).
+\newblock {Assessing the Efficiency Gains From Further Liberalization}.
+\newblock \emph{KSG Faculty Working Paper}, (RWP01-030).
+
+\bibitem[{Gräbner \emph{et~al.}(2020)Gräbner, Heimberger, Kapeller, \&
+  Springholz}]{openness}
+Gräbner, C., Heimberger, P., Kapeller, J., \& Springholz, F. (2020).
+\newblock {Understanding economic openness: a review of existing measures}.
+\newblock \emph{Review of World Economics}, pp. 1--34.
+\newblock \doi{10.1007/s10290-020-00391-1}.
+
+\bibitem[{Gygli \emph{et~al.}(2019)Gygli, Haelg, Potrafke, \&
+  Sturm}]{Gygli.2019}
+Gygli, S., Haelg, F., Potrafke, N., \& Sturm, J.~E. (2019).
+\newblock {The KOF Globalisation Index – revisited}.
+\newblock \emph{The Review of International Organizations}, 18(2), 266.
+\newblock \doi{10.1007/s11558-019-09344-2}.
+
+\bibitem[{Hidalgo \& Hausmann(2009)}]{Hidalgo.2009}
+Hidalgo, C.~A. \& Hausmann, R. (2009).
+\newblock {The building blocks of economic complexity}.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 106(26),
+  10570--10575.
+\newblock \doi{10.1073/pnas.0900943106}.
+
+\bibitem[{Jaumotte \emph{et~al.}(2013)Jaumotte, Lall, \&
+  Papageorgiou}]{Jaumotte.2013}
+Jaumotte, F., Lall, S., \& Papageorgiou, C. (2013).
+\newblock {Rising Income Inequality: Technology, or Trade and Financial
+  Globalization?}
+\newblock \emph{IMF Economic Review}, 61(2), 271--309.
+\newblock \doi{10.1057/imfer.2013.7}.
+
+\bibitem[{Lane \& Milesi-Ferretti(2017)}]{Lane.2017}
+Lane, P.~R. \& Milesi-Ferretti, G.~M. (2017).
+\newblock {International Financial Integration in the Aftermath of the Global
+  Financial Crisis}.
+\newblock \emph{IMF Working Paper}.
+
+\bibitem[{Li \emph{et~al.}(2004)Li, Morck, Yang, \& Yeung}]{Li.2004}
+Li, K., Morck, R., Yang, F., \& Yeung, B. (2004).
+\newblock {Firm-Specific Variation and Openness in Emerging Markets}.
+\newblock \emph{The Review of Economics and Statistics}, 86(3), 658--669.
+\newblock \doi{10.1162/0034653041811789}.
+
+\bibitem[{Quinn \& Toyoda(2008)}]{Quinn.2008fb4}
+Quinn, D.~P. \& Toyoda, A.~M. (2008).
+\newblock {Does Capital Account Liberalization Lead to Growth?}
+\newblock \emph{Review of Financial Studies}, 21(3), 1403--1449.
+\newblock \doi{10.1093/rfs/hhn034}.
+
+\bibitem[{Squalli \& Wilson(2011)}]{Squalli.2011}
+Squalli, J. \& Wilson, K. (2011).
+\newblock {A New Measure of Trade Openness}.
+\newblock \emph{The World Economy}, 34(10), 1745--1770.
+\newblock \doi{10.1111/j.1467-9701.2011.01404.x}.
+
+\end{thebibliography}
